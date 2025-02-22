@@ -3,7 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import { Typography } from "@mui/material";
 
-export default function ButtonAppBar() {
+const Header = () => {
   return (
     <AppBar position="static" sx={{ bgcolor: "white" }}>
       <Toolbar sx={{ color: "#E45C92" }}>
@@ -18,4 +18,6 @@ export default function ButtonAppBar() {
       </Toolbar>
     </AppBar>
   );
-}
+};
+
+export default Header;
