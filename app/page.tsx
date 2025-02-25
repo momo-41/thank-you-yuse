@@ -1,11 +1,11 @@
 import Header from "./components/Header";
-import Cheki from "./components/cheki";
+import PictureCard from "./components/PictureCard";
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <Cheki />
+      <PictureCard />
     </div>
   );
 }
