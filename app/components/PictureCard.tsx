@@ -19,17 +19,16 @@ const PictureCard = () => {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "flex-end",
         }}
       >
         <Box display={"flex"} alignItems={"center"}>
           <ChatBubbleOutlineIcon />
-          <Typography fontSize={11} fontFamily={"Georgia"} marginLeft={1}>
+          <Typography fontSize={11} fontFamily={"serif"} marginLeft={1}>
             株式会社PeachTech宣材写真
           </Typography>
         </Box>
         <Box display={"flex"} alignItems={"center"}>
-          <Typography fontSize={11} marginRight={1} fontFamily={"Georgia"}>
+          <Typography fontSize={11} marginRight={1} fontFamily={"serif"}>
             Picture More
           </Typography>
           <ArrowRightAltIcon />
