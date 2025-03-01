@@ -1,13 +1,7 @@
 import React from "react";
 import { Card, CardContent, Typography } from "@mui/material";
 
-const messageData = {
-  name: "國井 太陽",
-  message:
-    "先輩、今まで本当にありがとうございました！\nいつも優しく接してくださり、たくさんのことを教えていただきました。\n先輩のおかげでサークルの活動がとても楽しく、充実したものになりました。\nこれから新しい環境でも頑張ってください！またお会いできる機会があれば、ぜひお話ししましょう。\n本当にありがとうございました！お体に気をつけて、これからも応援しています！",
-};
-
-const MessageCard = () => {
+const MessageCard = ({ name, message }: MessageCardProps) => {
   return (
     <Card
       sx={{
@@ -71,7 +65,7 @@ const MessageCard = () => {
             fontSize: { xs: 25, md: 32 },
           }}
         >
-          {messageData.name}
+          {name}
         </Typography>
         <Typography
           variant="body1"
@@ -83,7 +77,7 @@ const MessageCard = () => {
             fontSize: { xs: 16, md: 20 },
           }}
         >
-          {messageData.message}
+          {message}
         </Typography>
       </CardContent>
     </Card>
