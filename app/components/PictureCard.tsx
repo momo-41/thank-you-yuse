@@ -1,24 +1,14 @@
-"use client";
-
-import {
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const PictureCard = () => {
-  const isMobile = useMediaQuery("(max-width:600px)");
   return (
-    <Box marginLeft={isMobile ? 3 : 0} marginRight={isMobile ? 6 : 0}>
+    <Box marginLeft={{ xs: 3, md: 0 }} marginRight={{ xs: 6, md: 0 }}>
       <Card
         sx={{
-          width: isMobile ? "100%" : 600,
-          height: isMobile ? 250 : 450,
+          width: { xs: "100%", md: 600 },
+          height: { xs: 250, md: 450 },
           paddingTop: 1.5,
           paddingLeft: 1.5,
           paddingRight: 1.5,
@@ -27,7 +17,7 @@ const PictureCard = () => {
         }}
       >
         <CardMedia
-          sx={{ height: isMobile ? 200 : 400, width: "100%" }}
+          sx={{ height: { xs: 200, md: 400 }, width: "100%" }}
           image="/yuse.jpg"
         />
         <CardContent

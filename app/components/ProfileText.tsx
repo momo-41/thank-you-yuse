@@ -1,22 +1,18 @@
-"use client";
-
 import React from "react";
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const ProfileText = () => {
-  const isMobile = useMediaQuery("(max-width:600px)");
-
   return (
     <Box
-      width={isMobile ? "100%" : "47%"}
-      textAlign={isMobile ? "center" : "left"}
+      width={{ xs: "100%", md: "47%" }}
+      textAlign={{ xs: "center", md: "left" }}
     >
       <Typography
         fontFamily={"serif"}
         color="#848484"
-        fontSize={isMobile ? 30 : 40}
-        paddingLeft={isMobile ? 0 : 3}
-        paddingTop={isMobile ? 3 : 10}
+        fontSize={{ xs: 30, md: 40 }}
+        paddingLeft={{ xs: 0, md: 3 }}
+        paddingTop={{ xs: 3, md: 10 }}
       >
         2nd President
       </Typography>
@@ -26,14 +22,14 @@ const ProfileText = () => {
         borderColor={"#10537F"}
         display="flex"
         flexDirection="column"
-        alignItems={isMobile ? "center" : "flex-start"}
-        textAlign={isMobile ? "center" : "left"}
+        alignItems={{ xs: "center", md: "flex-start" }}
+        textAlign={{ xs: "center", md: "left" }}
       >
         <Typography
           fontFamily={"serif"}
           color="#0C6DAE"
-          fontSize={isMobile ? 60 : 70}
-          paddingLeft={isMobile ? 0 : 12}
+          fontSize={{ xs: 60, md: 70 }}
+          paddingLeft={{ xs: 0, md: 12 }}
           marginBottom={-3}
         >
           Yusei
@@ -41,19 +37,19 @@ const ProfileText = () => {
         <Typography
           fontFamily={"serif"}
           color="#0C6DAE"
-          fontSize={isMobile ? 60 : 70}
-          paddingLeft={isMobile ? 0 : 25}
+          fontSize={{ xs: 60, md: 70 }}
+          paddingLeft={{ xs: 0, md: 25 }}
         >
           Imamura
         </Typography>
       </Box>
       <Typography
         fontFamily={"serif"}
-        fontSize={isMobile ? 30 : 40}
+        fontSize={{ xs: 30, md: 40 }}
         color="#10537F"
         textAlign={"center"}
-        paddingTop={isMobile ? 2 : 5}
-        marginBottom={isMobile ? -3 : 0}
+        paddingTop={{ xs: 2, md: 5 }}
+        marginBottom={{ xs: -3, md: 0 }}
       >
         2022.12.15 ~ 2025.3.19
       </Typography>
