@@ -1,7 +1,6 @@
-import React from "react";
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Typography, Box } from "@mui/material";
 
-const MessageCard = ({ name, message }: MessageCardProps) => {
+const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
   return (
     <Card
       sx={{
@@ -11,71 +10,59 @@ const MessageCard = ({ name, message }: MessageCardProps) => {
         boxShadow: 3,
         padding: 3,
         position: "relative",
-        ".UppercrossSide": {
-          content: '""',
+      }}
+    >
+      <Box
+        sx={{
           position: "absolute",
           top: 90,
           left: 5,
           width: "400px",
-          height: "2px",
-          backgroundColor: "#F7B0DC",
-        },
-        ".UppercrossVertical": {
-          content: '""',
+          borderTop: "2px solid #F7B0DC",
+        }}
+      />
+      <Box
+        sx={{
           position: "absolute",
           top: 30,
           left: 20,
-          width: "2px",
           height: "200px",
-          backgroundColor: "#F7B0DC",
-        },
-        ".UndercrossSide": {
-          content: '""',
+          borderLeft: "2px solid #F7B0DC",
+        }}
+      />
+      <Box
+        sx={{
           position: "absolute",
           bottom: 30,
           right: 5,
           width: "400px",
-          height: "2px",
-          backgroundColor: "#F7B0DC",
-        },
-        ".UndercrossVertical": {
-          content: '""',
+          borderBottom: "2px solid #F7B0DC",
+        }}
+      />
+      <Box
+        sx={{
           position: "absolute",
           bottom: 5,
           right: 20,
-          width: "2px",
           height: "200px",
-          backgroundColor: "#F7B0DC",
-        },
-      }}
-    >
-      <div className="UppercrossSide"></div>
-      <div className="UppercrossVertical"></div>
-      <div className="UndercrossSide"></div>
-      <div className="UndercrossVertical"></div>
-
+          borderRight: "2px solid #F7B0DC",
+        }}
+      />
       <CardContent>
         <Typography
-          variant="h5"
-          sx={{
-            fontFamily: "serif",
-            color: "#CB6A9C",
-            fontWeight: "bold",
-            paddingBottom: "4px",
-            fontSize: { xs: 25, md: 32 },
-          }}
+          fontFamily="serif"
+          color="#CB6A9C"
+          fontWeight="bold"
+          paddingBottom="4px"
+          sx={{ fontSize: { xs: 25, md: 32 } }}
         >
           {name}
         </Typography>
         <Typography
-          variant="body1"
-          sx={{
-            marginTop: 2,
-            whiteSpace: "pre-line",
-            fontFamily: "serif",
-            color: "black",
-            fontSize: { xs: 16, md: 20 },
-          }}
+          whiteSpace="pre-line"
+          fontFamily="serif"
+          color="black"
+          sx={{ marginTop: 2, fontSize: { xs: 16, md: 20 } }}
         >
           {message}
         </Typography>
