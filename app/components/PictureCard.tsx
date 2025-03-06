@@ -4,10 +4,10 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const PictureCard = () => {
   return (
-    <Box>
+    <Box display={"flex"} justifyContent={{ xs: "center", md: "flex-start" }}>
       <Card
         sx={{
-          width: { xs: "94%", md: 550 },
+          width: { xs: 300, md: 550 },
           height: { xs: 250, md: 450 },
           pt: 1.5,
           px: 1.5,
@@ -26,7 +26,7 @@ const PictureCard = () => {
         >
           <Box display={"flex"} alignItems={"center"}>
             <ChatBubbleOutlineIcon />
-            <Typography fontSize={11} fontFamily={"serif"} marginLeft={1}>
+            <Typography fontSize={11} fontFamily={"serif"} ml={1}>
               株式会社PeachTech宣材写真
             </Typography>
           </Box>

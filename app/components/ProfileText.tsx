@@ -24,7 +24,7 @@ const ProfileText = () => {
           fontFamily={"serif"}
           color="#0C6DAE"
           fontSize={{ xs: 60, md: 70 }}
-          pl={{ xs: 0, md: 18 }}
+          pl={{ md: 18 }}
           mb={-3}
         >
           Yusei
@@ -33,7 +33,7 @@ const ProfileText = () => {
           fontFamily={"serif"}
           color="#0C6DAE"
           fontSize={{ xs: 60, md: 70 }}
-          paddingLeft={{ xs: 0, md: 30 }}
+          pl={{ md: 30 }}
         >
           Imamura
         </Typography>
