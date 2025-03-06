@@ -4,65 +4,61 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
   return (
     <Card
       sx={{
-        width: "100%",
-        maxWidth: 700,
+        width: { xs: 310, xl: 700 },
         borderRadius: "16px",
         boxShadow: 3,
-        padding: 3,
+        px: 3,
+        pt: 2,
         position: "relative",
       }}
     >
       <Box
-        sx={{
-          position: "absolute",
-          top: 90,
-          left: 5,
-          width: "400px",
-          borderTop: "2px solid #F7B0DC",
-        }}
+        position={"absolute"}
+        top={70}
+        left={5}
+        width={"400px"}
+        bgcolor={"#F7B0DC"}
+        height={"2px"}
       />
       <Box
-        sx={{
-          position: "absolute",
-          top: 30,
-          left: 20,
-          height: "200px",
-          borderLeft: "2px solid #F7B0DC",
-        }}
+        position={"absolute"}
+        top={30}
+        left={20}
+        height={"200px"}
+        bgcolor={"#F7B0DC"}
+        width={"2px"}
       />
       <Box
-        sx={{
-          position: "absolute",
-          bottom: 30,
-          right: 5,
-          width: "400px",
-          borderBottom: "2px solid #F7B0DC",
-        }}
+        position={"absolute"}
+        bottom={30}
+        right={5}
+        width={"400px"}
+        bgcolor={"#F7B0DC"}
+        height={"2px"}
       />
       <Box
-        sx={{
-          position: "absolute",
-          bottom: 5,
-          right: 20,
-          height: "200px",
-          borderRight: "2px solid #F7B0DC",
-        }}
+        position={"absolute"}
+        bottom={5}
+        right={20}
+        height={"200px"}
+        bgcolor={"#F7B0DC"}
+        width={"2px"}
       />
       <CardContent>
         <Typography
-          fontFamily="serif"
-          color="#CB6A9C"
-          fontWeight="bold"
-          paddingBottom="4px"
-          sx={{ fontSize: { xs: 25, md: 32 } }}
+          fontFamily={"serif"}
+          color={"#CB6A9C"}
+          fontWeight={"bold"}
+          fontSize={{ xs: 25, md: 28 }}
         >
           {name}
         </Typography>
         <Typography
-          whiteSpace="pre-line"
-          fontFamily="serif"
-          color="black"
-          sx={{ marginTop: 2, fontSize: { xs: 16, md: 20 } }}
+          whiteSpace={"pre-line"}
+          fontFamily={"serif"}
+          color={"black"}
+          my={2}
+          fontSize={{ xs: 16, md: 20 }}
         >
           {message}
         </Typography>
