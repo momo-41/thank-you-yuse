@@ -5,7 +5,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
     <Card
       sx={{
         width: { xs: 310, xl: 700 },
-        borderRadius: "16px",
+        borderRadius: 2,
         boxShadow: 3,
         px: 3,
         pt: 2,
