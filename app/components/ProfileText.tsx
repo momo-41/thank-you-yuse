@@ -1,18 +1,13 @@
-import React from "react";
 import { Box, Typography } from "@mui/material";
 
 const ProfileText = () => {
   return (
-    <Box
-      width={{ xs: "100%", md: "47%" }}
-      textAlign={{ xs: "center", md: "left" }}
-    >
+    <Box width={{ xs: "100%" }} textAlign={{ xs: "center", md: "left" }}>
       <Typography
         fontFamily={"serif"}
         color="#848484"
         fontSize={{ xs: 30, md: 40 }}
-        paddingLeft={{ xs: 0, md: 3 }}
-        paddingTop={{ xs: 3, md: 10 }}
+        pl={{ md: 7 }}
       >
         2nd President
       </Typography>
@@ -29,8 +24,8 @@ const ProfileText = () => {
           fontFamily={"serif"}
           color="#0C6DAE"
           fontSize={{ xs: 60, md: 70 }}
-          paddingLeft={{ xs: 0, md: 12 }}
-          marginBottom={-3}
+          pl={{ xs: 0, md: 18 }}
+          mb={-3}
         >
           Yusei
         </Typography>
@@ -38,7 +33,7 @@ const ProfileText = () => {
           fontFamily={"serif"}
           color="#0C6DAE"
           fontSize={{ xs: 60, md: 70 }}
-          paddingLeft={{ xs: 0, md: 25 }}
+          paddingLeft={{ xs: 0, md: 30 }}
         >
           Imamura
         </Typography>
@@ -48,8 +43,7 @@ const ProfileText = () => {
         fontSize={{ xs: 30, md: 40 }}
         color="#10537F"
         textAlign={"center"}
-        paddingTop={{ xs: 2, md: 5 }}
-        marginBottom={{ xs: -3, md: 0 }}
+        pt={{ xs: 2, md: 5 }}
       >
         2022.12.15 ~ 2025.3.19
       </Typography>
