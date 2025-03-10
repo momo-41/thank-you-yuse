@@ -5,14 +5,13 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 const LabTabs = () => {
   const [value, setValue] = React.useState("1");
 
-  const tabColors: { [key: string]: string } = {
+  const tabColors = {
     "1": "#E91E63", // ピンク（全員）
     "2": "#1089DA", // 青（25卒）
     "3": "#EE953C", // オレンジ（26卒）
     "4": "#52C9A2", // 緑（27卒）
     "5": "#B558C9", // 紫（28卒）
-  };
-
+  } as const;
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
