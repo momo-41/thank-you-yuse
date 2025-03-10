@@ -4,19 +4,19 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
   return (
     <Card
       sx={{
-        width: { xs: 310, xl: 700 },
-        borderRadius: 2,
+        width: { xs: 310, md: 500, xl: 700 },
+        borderRadius: 4,
         boxShadow: 3,
         px: 3,
-        pt: 2,
         position: "relative",
+        m: { xs: 1, md: 4 },
       }}
     >
       <Box
         position={"absolute"}
-        top={70}
+        top={{ xs: 50, md: 55 }}
         left={5}
-        width={"400px"}
+        width={{ xs: 300, md: 450 }}
         bgcolor={"#F7B0DC"}
         height={"2px"}
       />
@@ -24,7 +24,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         position={"absolute"}
         top={30}
         left={20}
-        height={"200px"}
+        height={{ xs: 150, md: 200 }}
         bgcolor={"#F7B0DC"}
         width={"2px"}
       />
@@ -32,7 +32,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         position={"absolute"}
         bottom={30}
         right={5}
-        width={"400px"}
+        width={{ xs: 300, md: 450 }}
         bgcolor={"#F7B0DC"}
         height={"2px"}
       />
@@ -40,7 +40,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         position={"absolute"}
         bottom={5}
         right={20}
-        height={"200px"}
+        height={{ xs: 150, md: 200 }}
         bgcolor={"#F7B0DC"}
         width={"2px"}
       />
@@ -49,16 +49,17 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
           fontFamily={"serif"}
           color={"#CB6A9C"}
           fontWeight={"bold"}
-          fontSize={{ xs: 25, md: 28 }}
+          fontSize={{ xs: 20, md: 27 }}
         >
           {name}
         </Typography>
         <Typography
-          whiteSpace={"pre-line"}
           fontFamily={"serif"}
           color={"black"}
           my={2}
-          fontSize={{ xs: 16, md: 20 }}
+          mb={3}
+          mx={1}
+          fontSize={{ xs: 12, md: 17 }}
         >
           {message}
         </Typography>
