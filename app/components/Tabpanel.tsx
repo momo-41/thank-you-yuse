@@ -5,7 +5,7 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 const LabTabs = () => {
   const [value, setValue] = React.useState("1");
 
-  const tabColors = {
+  const tabColors: { [key: string]: string } = {
     "1": "#E91E63", // ピンク（全員）
     "2": "#1089DA", // 青（25卒）
     "3": "#EE953C", // オレンジ（26卒）
