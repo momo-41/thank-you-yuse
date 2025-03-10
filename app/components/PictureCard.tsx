@@ -22,17 +22,14 @@ const PictureCard = () => {
           sx={{
             display: "flex",
             justifyContent: "space-between",
+            p: 0, //MEMO:デフォルトでpaddingがあたっているので0に設定
+            py: 1.5,
           }}
         >
           <Box display={"flex"} alignItems={"center"}>
-            <Box
-              ml={{ xs: -1.8 }}
-              display={"flex"}
-              alignItems={"center"}
-              mb={0.3}
-            >
+            <Box display={"flex"} alignItems={"center"} mb={0.3}>
               <Image
-                src={"./chat-bubble.svg"}
+                src={"./chat-bubble-icon.svg"}
                 alt={"吹き出しのアイコン"}
                 width={14}
                 height={14}
@@ -54,7 +51,7 @@ const PictureCard = () => {
             >
               Picture More
             </Typography>
-            <ArrowRightAltIcon sx={{ mr: -1.8, color: "#5d5d5d" }} />
+            <ArrowRightAltIcon sx={{ color: "#5d5d5d" }} />
           </Box>
         </CardContent>
       </Card>
