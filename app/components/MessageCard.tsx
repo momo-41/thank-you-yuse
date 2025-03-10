@@ -17,7 +17,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         position={"absolute"}
         top={{ xs: 50, md: 63, xl: 70 }}
         left={5}
-        width={{ xs: 300, md: 450, xl: "400px" }}
+        width={{ xs: 300, md: 450 }}
         bgcolor={"#F7B0DC"}
         height={"2px"}
       />
@@ -25,7 +25,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         position={"absolute"}
         top={20}
         left={20}
-        height={{ xs: 150, md: 200, xl: "200px" }}
+        height={{ xs: 150, md: 200 }}
         bgcolor={"#F7B0DC"}
         width={"2px"}
       />
@@ -33,7 +33,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         position={"absolute"}
         bottom={30}
         right={5}
-        width={{ xs: 300, md: 450, xl: "400px" }}
+        width={{ xs: 300, md: 450 }}
         bgcolor={"#F7B0DC"}
         height={"2px"}
       />
@@ -41,7 +41,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         position={"absolute"}
         bottom={5}
         right={20}
-        height={{ xs: 150, md: 200, xl: "200px" }}
+        height={{ xs: 150, md: 200 }}
         bgcolor={"#F7B0DC"}
         width={"2px"}
       />
