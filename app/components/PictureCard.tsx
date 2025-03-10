@@ -1,6 +1,6 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
-import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import Image from "next/image";
 
 const PictureCard = () => {
   return (
@@ -25,24 +25,36 @@ const PictureCard = () => {
           }}
         >
           <Box display={"flex"} alignItems={"center"}>
-            <ChatBubbleOutlineIcon sx={{ ml: -1.7 }} />
+            <Box
+              ml={{ xs: -1.8 }}
+              display={"flex"}
+              alignItems={"center"}
+              mb={0.3}
+            >
+              <Image
+                src={"./chat-bubble.svg"}
+                alt={"吹き出しのアイコン"}
+                width={14}
+                height={14}
+              />
+            </Box>
             <Typography
-              fontSize={{ xs: 10, md: 11 }}
+              fontSize={11}
               fontFamily={"serif"}
-              ml={{ xs: 1, md: 2 }}
+              ml={{ xs: 0.7, md: 1 }}
             >
               株式会社PeachTech宣材写真
             </Typography>
           </Box>
           <Box display={"flex"} alignItems={"center"}>
             <Typography
-              fontSize={{ xs: 10, md: 11 }}
-              mr={1}
+              fontSize={11}
+              mr={{ xs: 0.3, md: 1 }}
               fontFamily={"serif"}
             >
               Picture More
             </Typography>
-            <ArrowRightAltIcon />
+            <ArrowRightAltIcon sx={{ mr: -1.8, color: "#5d5d5d" }} />
           </Box>
         </CardContent>
       </Card>
