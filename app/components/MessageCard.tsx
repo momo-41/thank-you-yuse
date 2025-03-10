@@ -22,7 +22,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
       />
       <Box
         position={"absolute"}
-        top={30}
+        top={15}
         left={20}
         height={{ xs: 150, md: 200 }}
         bgcolor={"#F7B0DC"}
@@ -49,7 +49,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
           fontFamily={"serif"}
           color={"#CB6A9C"}
           fontWeight={"bold"}
-          fontSize={{ xs: 20, md: 27 }}
+          fontSize={{ xs: 20, md: 24 }}
         >
           {name}
         </Typography>
