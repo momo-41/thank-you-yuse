@@ -25,13 +25,21 @@ const PictureCard = () => {
           }}
         >
           <Box display={"flex"} alignItems={"center"}>
-            <ChatBubbleOutlineIcon />
-            <Typography fontSize={11} fontFamily={"serif"} ml={1}>
+            <ChatBubbleOutlineIcon sx={{ ml: -1.7 }} />
+            <Typography
+              fontSize={{ xs: 10, md: 11 }}
+              fontFamily={"serif"}
+              ml={{ xs: 1, md: 2 }}
+            >
               株式会社PeachTech宣材写真
             </Typography>
           </Box>
           <Box display={"flex"} alignItems={"center"}>
-            <Typography fontSize={11} mr={1} fontFamily={"serif"}>
+            <Typography
+              fontSize={{ xs: 10, md: 11 }}
+              mr={1}
+              fontFamily={"serif"}
+            >
               Picture More
             </Typography>
             <ArrowRightAltIcon />
