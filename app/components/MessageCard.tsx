@@ -9,7 +9,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         boxShadow: 3,
         px: 3,
         position: "relative",
-        m: { xs: 1, md: 4 },
+        m: { xs: 1, md: 4 }, // MEMO:カードの全体像を見るために当てたので、Gridを使う時には削除する
         pt: { xs: 0.5, md: 1, xl: 2 },
       }}
     >
