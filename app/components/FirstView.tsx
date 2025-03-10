@@ -6,7 +6,7 @@ import ProfileText from "./ProfileText";
 const FirstView = () => {
   return (
     <CustomBox>
-      <Box width="100%" mb={{ xs: 10, md: 0 }}>
+      <Box width="100%" mb={{ xs: 3, md: 0 }}>
         <ProfileText />
       </Box>
       <Box width="100%">
