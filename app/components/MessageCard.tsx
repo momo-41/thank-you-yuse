@@ -50,7 +50,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
           fontFamily={"serif"}
           color={"#CB6A9C"}
           fontWeight={"bold"}
-          fontSize={{ xs: 17, md: 22 }}
+          fontSize={{ xs: 17, md: 22, xl: 28 }}
         >
           {name}
         </Typography>
