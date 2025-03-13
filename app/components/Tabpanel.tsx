@@ -1,7 +1,9 @@
 "use client";
 import * as React from "react";
 import { Box, Tab } from "@mui/material";
-import { TabContext, TabList, TabPanel } from "@mui/lab";
+import { TabContext, TabList, TabPanel } from "@mui/lab"
+import GridCard from "./GridCard";
+import YearGridCard from "./YearGridCard";
 const LabTabs = () => {
   const [value, setValue] = React.useState("1");
 
@@ -38,11 +40,21 @@ const LabTabs = () => {
           <Tab label="28卒" value="5" sx={{ color: "#B558C9" }} />
         </TabList>
       </Box>
-      <TabPanel value="1">Item One</TabPanel>
-      <TabPanel value="2">Item Two</TabPanel>
-      <TabPanel value="3">Item Three</TabPanel>
-      <TabPanel value="4">Item Four</TabPanel>
-      <TabPanel value="5">Item Five</TabPanel>
+      <TabPanel value="1">
+        <GridCard />
+      </TabPanel>
+      <TabPanel value="2">
+        <YearGridCard yearProps="25卒" />
+      </TabPanel>
+      <TabPanel value="3">
+        <YearGridCard yearProps="26卒" />
+      </TabPanel>
+      <TabPanel value="4">
+        <YearGridCard yearProps="27卒" />
+      </TabPanel>
+      <TabPanel value="5">
+        <YearGridCard yearProps="28卒" />
+      </TabPanel>
     </TabContext>
   );
 };

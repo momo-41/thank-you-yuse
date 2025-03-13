@@ -18,8 +18,8 @@ const GridCard = () => {
         justifyContent={"center"}
         sx={{ py: { xs: 2, md: 13 }, px: { xs: 1, md: 10 } }}
       >
-        {messageData.map((message, index) => (
-          <Grid sx={{ key: index, xs: 12, md: 6 }}>
+        {messageData.map((message) => (
+          <Grid key={message.name} sx={{ xs: 12, md: 6 }}>
             <MessageCard
               name={message.name}
               message={message.message}
