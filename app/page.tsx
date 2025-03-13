@@ -1,14 +1,15 @@
 import Header from "./components/Header";
 import FirstView from "./components/FirstView";
-import MessageCard from "./components/MessageCard";
-import { messageData } from "./data/data";
+import GridCard from "./components/GridCard";
+import YearGridCard from "./components/YearGridCard";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <FirstView />
-      <MessageCard name={messageData.name} message={messageData.message} />
+      <GridCard />
+      <YearGridCard yearProps="25卒" />
     </div>
   );
 }
