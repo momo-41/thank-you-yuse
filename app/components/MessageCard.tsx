@@ -1,6 +1,12 @@
 import { Card, CardContent, Typography, Box } from "@mui/material";
 
-const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
+const MessageCard: React.FC<MessageCardProps> = ({
+  name,
+  message,
+  year,
+  nameColor,
+  lineColor,
+}) => {
   return (
     <Card
       sx={{
@@ -18,7 +24,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         top={{ xs: 50, md: 63, xl: 70 }}
         left={5}
         width={{ xs: 300, md: 450 }}
-        bgcolor={"#F7B0DC"}
+        bgcolor={lineColor}
         height={"2px"}
       />
       <Box
@@ -26,7 +32,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         top={20}
         left={20}
         height={{ xs: 150, md: 200 }}
-        bgcolor={"#F7B0DC"}
+        bgcolor={lineColor}
         width={"2px"}
       />
       <Box
@@ -34,7 +40,7 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         bottom={30}
         right={5}
         width={{ xs: 300, md: 450 }}
-        bgcolor={"#F7B0DC"}
+        bgcolor={lineColor}
         height={"2px"}
       />
       <Box
@@ -42,13 +48,13 @@ const MessageCard: React.FC<MessageCardProps> = ({ name, message }) => {
         bottom={5}
         right={20}
         height={{ xs: 150, md: 200 }}
-        bgcolor={"#F7B0DC"}
+        bgcolor={lineColor}
         width={"2px"}
       />
       <CardContent>
         <Typography
           fontFamily={"serif"}
-          color={"#CB6A9C"}
+          color={nameColor}
           fontWeight={"bold"}
           fontSize={{ xs: 17, md: 22, xl: 28 }}
         >

@@ -1,20 +1,31 @@
 "use client";
 import * as React from "react";
 import { Box, Tab } from "@mui/material";
-import { TabContext, TabList, TabPanel } from "@mui/lab"
+import { TabContext, TabList, TabPanel } from "@mui/lab";
 import GridCard from "./GridCard";
 import YearGridCard from "./YearGridCard";
 const LabTabs = () => {
   const [value, setValue] = React.useState("1");
 
+  // メインカラー
   const tabColors: Record<string, string> = {
     "1": "#E91E63", // ピンク（全員）
-    "2": "#1089DA", // 青（25卒）
-    "3": "#EE953C", // オレンジ（26卒）
-    "4": "#52C9A2", // 緑（27卒）
-    "5": "#B558C9", // 紫（28卒）
+    "2": "#10537F", // 青（25卒）
+    "3": "#D46D05", // オレンジ（26卒）
+    "4": "#117642", // 緑（27卒）
+    "5": "#8D00AD", // 紫（28卒）
   };
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+
+  // サブカラー
+  const lineColors: Record<string, string> = {
+    "1": "#F7B0DC", // 全員
+    "2": "#98B7F0", // 25卒
+    "3": "#FFCE9D", // 26卒
+    "4": "#B5E6B5", // 27卒
+    "5": "#F1B3FF", // 28卒
+  };
+
+  const handleChange = (_event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
 
@@ -33,27 +44,52 @@ const LabTabs = () => {
             },
           }}
         >
-          <Tab label="全員" value="1" sx={{ color: "#E91E63" }} />
-          <Tab label="25卒" value="2" sx={{ color: "#1089DA" }} />
-          <Tab label="26卒" value="3" sx={{ color: "#EE953C" }} />
-          <Tab label="27卒" value="4" sx={{ color: "#52C9A2" }} />
-          <Tab label="28卒" value="5" sx={{ color: "#B558C9" }} />
+          <Tab
+            label="全員"
+            value="1"
+            sx={{
+              color: tabColors["1"],
+              "&.Mui-selected": {
+                color: "#E45C92",
+              },
+            }}
+          />
+          <Tab label="25卒" value="2" sx={{ color: tabColors["2"] }} />
+          <Tab label="26卒" value="3" sx={{ color: tabColors["3"] }} />
+          <Tab label="27卒" value="4" sx={{ color: tabColors["4"] }} />
+          <Tab label="28卒" value="5" sx={{ color: tabColors["5"] }} />
         </TabList>
       </Box>
       <TabPanel value="1">
-        <GridCard />
+        <GridCard nameColor={tabColors[value]} lineColor={lineColors[value]} />
       </TabPanel>
       <TabPanel value="2">
-        <YearGridCard yearProps="25卒" />
+        <YearGridCard
+          yearProps="25卒"
+          nameColor={tabColors[value]}
+          lineColor={lineColors[value]}
+        />
       </TabPanel>
       <TabPanel value="3">
-        <YearGridCard yearProps="26卒" />
+        <YearGridCard
+          yearProps="26卒"
+          nameColor={tabColors[value]}
+          lineColor={lineColors[value]}
+        />
       </TabPanel>
       <TabPanel value="4">
-        <YearGridCard yearProps="27卒" />
+        <YearGridCard
+          yearProps="27卒"
+          nameColor={tabColors[value]}
+          lineColor={lineColors[value]}
+        />
       </TabPanel>
       <TabPanel value="5">
-        <YearGridCard yearProps="28卒" />
+        <YearGridCard
+          yearProps="28卒"
+          nameColor={tabColors[value]}
+          lineColor={lineColors[value]}
+        />
       </TabPanel>
     </TabContext>
   );

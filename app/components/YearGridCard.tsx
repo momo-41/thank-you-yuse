@@ -5,9 +5,11 @@ import MessageCard from "./MessageCard";
 
 type TProps = {
   yearProps: string;
+  nameColor: string;
+  lineColor: string;
 };
 
-const YearGridCard: React.FC<TProps> = ({ yearProps }) => {
+const YearGridCard: React.FC<TProps> = ({ yearProps, nameColor, lineColor }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid
@@ -20,12 +22,14 @@ const YearGridCard: React.FC<TProps> = ({ yearProps }) => {
       >
         {messageData
           .filter((message) => message.year === yearProps) // 指定の学年だけを表示
-          .map((message, index) => (
-              <Grid sx={{ key: index, xs: 12, md: 6 }}>
+          .map((message) => (
+            <Grid key={message.name} sx={{ xs: 12, md: 6 }}>
               <MessageCard
                 name={message.name}
                 message={message.message}
                 year={message.year}
+                nameColor={nameColor}
+                lineColor={lineColor}
               />
             </Grid>
           ))}

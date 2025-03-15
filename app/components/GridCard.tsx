@@ -3,7 +3,12 @@ import Grid from "@mui/material/Grid2";
 import { messageData } from "../data/data"; // メッセージデータをインポート
 import MessageCard from "./MessageCard"; // メッセージカードコンポーネント
 
-const GridCard = () => {
+type GridCardProps = {
+  nameColor: string;
+  lineColor: string;
+};
+
+const GridCard: React.FC<GridCardProps> = ({ nameColor, lineColor }) => {
   return (
     <Box
       sx={{
@@ -24,6 +29,8 @@ const GridCard = () => {
               name={message.name}
               message={message.message}
               year={message.year}
+              nameColor={nameColor}
+              lineColor={lineColor}
             />
           </Grid>
         ))}
