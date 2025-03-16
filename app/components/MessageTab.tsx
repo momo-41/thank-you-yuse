@@ -4,10 +4,11 @@ import { Box, Tab } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import GridCard from "./GridCard";
 import YearGridCard from "./YearGridCard";
+import { useMessageData } from "../data/fetchData";
 
 const MessageTab = () => {
   const [value, setValue] = React.useState("1");
-
+  const messageData = useMessageData();
   const tabColors: Record<string, string> = {
     "1": "#E91E63", // ピンク
     "2": "#10537F", // 青
@@ -82,7 +83,7 @@ const MessageTab = () => {
       </Box>
       {/* 全員のタブパネル */}
       <TabPanel value="1">
-        <GridCard nameColor={tabColors[value]} lineColor={lineColors[value]} />
+        <GridCard nameColor={tabColors[value]} lineColor={lineColors[value]} messageData={messageData}/>
       </TabPanel>
       {/*学年ごとのタブパネル */}
       {tabs
@@ -93,6 +94,7 @@ const MessageTab = () => {
               yearProps={tab.label}
               nameColor={tabColors[value]}
               lineColor={lineColors[value]}
+              messageData={messageData}
             />
           </TabPanel>
         ))}
