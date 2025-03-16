@@ -6,7 +6,7 @@ export type MessageCardProps = {
   lineColor: string;
 };
 
-type GalleryRowProps = {
+export type GalleryRowProps = {
   images: string[];
 };
 
@@ -16,7 +16,7 @@ export type YearGridCardProps = {
   lineColor: string;
 };
 
- export type GridCardProps = {
+export type GridCardProps = {
   nameColor: string;
   lineColor: string;
 };

@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import PictureImage from "./GalleryItem";
+import { GalleryRowProps } from "../types/types";
 
 const GallerySecondRow: React.FC<GalleryRowProps> = ({ images }) => {
   return (
