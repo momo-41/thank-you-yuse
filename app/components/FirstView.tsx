@@ -37,7 +37,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    opacity: 0.4,
+    opacity: 0.5,
     zIndex: -1,
   },
 }));
