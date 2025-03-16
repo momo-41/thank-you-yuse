@@ -21,7 +21,7 @@ const GridCard: React.FC<GridCardProps> = ({ nameColor, lineColor }) => {
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
-        sx={{ py: { xs: 2, md: 13 }, px: { xs: 1, md: 10 } }}
+        sx={{ py: { xs: 2, md: 13 }, px: 0 }}
       >
         {messageData.map((message) => (
           <Grid key={message.name} sx={{ xs: 12, md: 6 }}>

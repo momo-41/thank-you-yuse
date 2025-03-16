@@ -10,12 +10,12 @@ const MessageCard: React.FC<MessageCardProps> = ({
   return (
     <Card
       sx={{
-        width: { xs: 310, md: 500, xl: 700 },
+        width: { xs: 300, md: 500, xl: 700 },
         borderRadius: 4,
         boxShadow: 3,
         px: 3,
         position: "relative",
-        m: { xs: 1, md: 4 }, // MEMO:カードの全体像を見るために当てたので、Gridを使う時には削除する
+        m: { md: 4 }, // MEMO:カードの全体像を見るために当てたので、Gridを使う時には削除する
         pt: { xs: 0.5, md: 1, xl: 2 },
       }}
     >

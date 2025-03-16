@@ -48,16 +48,55 @@ const LabTabs = () => {
             label="全員"
             value="1"
             sx={{
+              fontSize: { xs: 13, md: 20 },
               color: tabColors["1"],
+              minWidth: { xs: 70, md: 180 },
+              minHeight: 60,
               "&.Mui-selected": {
                 color: "#E45C92",
               },
             }}
           />
-          <Tab label="25卒" value="2" sx={{ color: tabColors["2"] }} />
-          <Tab label="26卒" value="3" sx={{ color: tabColors["3"] }} />
-          <Tab label="27卒" value="4" sx={{ color: tabColors["4"] }} />
-          <Tab label="28卒" value="5" sx={{ color: tabColors["5"] }} />
+          <Tab
+            label="25卒"
+            value="2"
+            sx={{
+              fontSize: { xs: 13, md: 20 },
+              color: tabColors["2"],
+              minWidth: { xs: 70, md: 180 },
+              minHeight: 60,
+            }}
+          />
+          <Tab
+            label="26卒"
+            value="3"
+            sx={{
+              fontSize: { xs: 13, md: 20 },
+              color: tabColors["3"],
+              minWidth: { xs: 70, md: 180 },
+              minHeight: 60,
+            }}
+          />
+          <Tab
+            label="27卒"
+            value="4"
+            sx={{
+              fontSize: { xs: 13, md: 20 },
+              color: tabColors["4"],
+              minWidth: { xs: 70, md: 180 },
+              minHeight: 60,
+            }}
+          />
+          <Tab
+            label="28卒"
+            value="5"
+            sx={{
+              fontSize: { xs: 13, md: 20 },
+              color: tabColors["5"],
+              minWidth: { xs: 70, md: 180 },
+              minHeight:60,
+            }}
+          />
         </TabList>
       </Box>
       <TabPanel value="1">
