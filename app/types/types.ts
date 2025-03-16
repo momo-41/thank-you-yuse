@@ -6,6 +6,10 @@ export type MessageCardProps = {
   lineColor: string;
 };
 
+type GalleryRowProps = {
+  images: string[];
+};
+
 export type YearGridCardProps = {
   yearProps: string;
   nameColor: string;
