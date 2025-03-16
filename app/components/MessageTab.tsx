@@ -5,7 +5,7 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import GridCard from "./GridCard";
 import YearGridCard from "./YearGridCard";
 
-const LabTabs = () => {
+const MessageTab = () => {
   const [value, setValue] = React.useState("1");
 
   const tabColors: Record<string, string> = {
@@ -42,6 +42,7 @@ const LabTabs = () => {
         <TabList
           onChange={handleChange}
           centered
+          aria-label="Message Tabs"
           sx={{
             "& .Mui-selected": { color: tabColors[value] },
             "& .MuiTabs-indicator": { backgroundColor: tabColors[value] },
@@ -49,6 +50,7 @@ const LabTabs = () => {
         >
           {/* 全員タブ */}
           <Tab
+            // component="button"
             label="全員"
             value="1"
             sx={{
@@ -64,6 +66,7 @@ const LabTabs = () => {
             .filter((tab) => tab.value !== "1")
             .map((tab) => (
               <Tab
+                // component="button"
                 key={tab.value}
                 label={tab.label}
                 value={tab.value}
@@ -97,4 +100,4 @@ const LabTabs = () => {
   );
 };
 
-export default LabTabs;
+export default MessageTab;

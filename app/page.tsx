@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import FirstView from "./components/FirstView";
-import Tabpanel from "./components/MessageTab";
+import MessageTab from "./components/MessageTab";
 import TopButton from "./components/TopButton";
 
 export default function Home() {
@@ -8,8 +8,8 @@ export default function Home() {
     <div>
       <Header />
       <FirstView />
-      <Tabpanel />
-      <TopButton/>
+      <MessageTab />
+      <TopButton />
     </div>
   );
 }
