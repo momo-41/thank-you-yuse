@@ -4,6 +4,7 @@ import { Box, Tab } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import GridCard from "./GridCard";
 import YearGridCard from "./YearGridCard";
+
 const LabTabs = () => {
   const [value, setValue] = React.useState("1");
 
@@ -27,21 +28,26 @@ const LabTabs = () => {
     setValue(newValue);
   };
 
+  const tabs = [
+    { value: "1", label: "全員" },
+    { value: "2", label: "25卒" },
+    { value: "3", label: "26卒" },
+    { value: "4", label: "27卒" },
+    { value: "5", label: "28卒" },
+  ];
+
   return (
     <TabContext value={value}>
-      <Box borderBottom={1} borderColor={"divider"}>
+      <Box borderBottom={1} borderColor="divider">
         <TabList
           onChange={handleChange}
           centered
           sx={{
-            "& .Mui-selected": {
-              color: tabColors[value],
-            },
-            "& .MuiTabs-indicator": {
-              backgroundColor: tabColors[value],
-            },
+            "& .Mui-selected": { color: tabColors[value] },
+            "& .MuiTabs-indicator": { backgroundColor: tabColors[value] },
           }}
         >
+          {/* 全員タブ */}
           <Tab
             label="全員"
             value="1"
@@ -50,85 +56,45 @@ const LabTabs = () => {
               color: tabColors["1"],
               minWidth: { xs: 70, md: 180 },
               minHeight: 60,
-              "&.Mui-selected": {
-                color: "#E45C92",
-              },
+              "&.Mui-selected": { color: "#E45C92" },
             }}
           />
-          <Tab
-            label="25卒"
-            value="2"
-            sx={{
-              fontSize: { xs: 13, md: 20 },
-              color: tabColors["2"],
-              minWidth: { xs: 70, md: 180 },
-              minHeight: 60,
-            }}
-          />
-          <Tab
-            label="26卒"
-            value="3"
-            sx={{
-              fontSize: { xs: 13, md: 20 },
-              color: tabColors["3"],
-              minWidth: { xs: 70, md: 180 },
-              minHeight: 60,
-            }}
-          />
-          <Tab
-            label="27卒"
-            value="4"
-            sx={{
-              fontSize: { xs: 13, md: 20 },
-              color: tabColors["4"],
-              minWidth: { xs: 70, md: 180 },
-              minHeight: 60,
-            }}
-          />
-          <Tab
-            label="28卒"
-            value="5"
-            sx={{
-              fontSize: { xs: 13, md: 20 },
-              color: tabColors["5"],
-              minWidth: { xs: 70, md: 180 },
-              minHeight:60,
-            }}
-          />
+          {/*学年ごとのタブ */}
+          {tabs
+            .filter((tab) => tab.value !== "1")
+            .map((tab) => (
+              <Tab
+                key={tab.value}
+                label={tab.label}
+                value={tab.value}
+                sx={{
+                  color: tabColors[tab.value],
+                  fontSize: { xs: 13, md: 20 },
+                  minWidth: { xs: 70, md: 180 },
+                  minHeight: 60,
+                }}
+              />
+            ))}
         </TabList>
       </Box>
+      {/* 全員のタブパネル */}
       <TabPanel value="1">
         <GridCard nameColor={tabColors[value]} lineColor={lineColors[value]} />
       </TabPanel>
-      <TabPanel value="2">
-        <YearGridCard
-          yearProps="25卒"
-          nameColor={tabColors[value]}
-          lineColor={lineColors[value]}
-        />
-      </TabPanel>
-      <TabPanel value="3">
-        <YearGridCard
-          yearProps="26卒"
-          nameColor={tabColors[value]}
-          lineColor={lineColors[value]}
-        />
-      </TabPanel>
-      <TabPanel value="4">
-        <YearGridCard
-          yearProps="27卒"
-          nameColor={tabColors[value]}
-          lineColor={lineColors[value]}
-        />
-      </TabPanel>
-      <TabPanel value="5">
-        <YearGridCard
-          yearProps="28卒"
-          nameColor={tabColors[value]}
-          lineColor={lineColors[value]}
-        />
-      </TabPanel>
+      {/*学年ごとのタブパネル */}
+      {tabs
+        .filter((tab) => tab.value !== "1")
+        .map((tab) => (
+          <TabPanel key={tab.value} value={tab.value}>
+            <YearGridCard
+              yearProps={tab.label}
+              nameColor={tabColors[value]}
+              lineColor={lineColors[value]}
+            />
+          </TabPanel>
+        ))}
     </TabContext>
   );
 };
+
 export default LabTabs;
