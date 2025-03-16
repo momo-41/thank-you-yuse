@@ -11,7 +11,7 @@ export function useMessageData() {
       const { data, error } = await supabase
         .from('Data')
         .select('*');
-      
+
       if (error) {
         console.error('Supabaseエラー詳細:', error);
         return;
