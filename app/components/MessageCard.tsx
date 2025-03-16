@@ -4,7 +4,6 @@ import { MessageCardProps } from "../types/types";
 const MessageCard: React.FC<MessageCardProps> = ({
   name,
   message,
-  year,
   nameColor,
   lineColor,
 }) => {
