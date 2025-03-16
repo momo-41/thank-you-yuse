@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Button, Box, Typography } from "@mui/material";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 const TopButton = () => {
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -33,11 +33,12 @@ const TopButton = () => {
           },
         }}
       >
-        <ArrowUpwardIcon
+        <KeyboardArrowUpIcon
           sx={{
             fontSize: {
               xs: 24,
               md: 36,
+              color: "#858181",
             },
           }}
         />
@@ -46,6 +47,7 @@ const TopButton = () => {
             fontSize: {
               xs: 14,
               md: 20,
+              color: "#706D6D",
             },
           }}
         >
