@@ -9,7 +9,12 @@ const TopButton = () => {
   };
 
   return (
-    <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+    <Box
+      display={"flex"}
+      justifyContent={"center"}
+      alignItems={"center"}
+      mt={5}
+    >
       <Button
         variant="contained"
         onClick={handleScrollToTop}
