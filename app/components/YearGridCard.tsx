@@ -4,22 +4,20 @@ import { messageData } from "../data/data";
 import MessageCard from "./MessageCard";
 import { YearGridCardProps } from "../types/types";
 
-
-
 const YearGridCard: React.FC<YearGridCardProps> = ({
   yearProps,
   nameColor,
   lineColor,
 }) => {
   return (
-    <Box sx={{ pt: { xs: 4 } }}>
+    <Box pt={{ xs: 4 }}>
       <Grid
         container
         spacing={{ xs: 6, md: 12 }}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
-        sx={{ py: { md: 13 } }}
+        py={{ md: 13 }}
       >
         {messageData
           .filter((message) => message.year === yearProps) // 指定の学年だけを表示

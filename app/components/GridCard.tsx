@@ -4,18 +4,16 @@ import { messageData } from "../data/data";
 import MessageCard from "./MessageCard";
 import { GridCardProps } from "../types/types";
 
-
-
 const GridCard: React.FC<GridCardProps> = ({ nameColor, lineColor }) => {
   return (
-    <Box sx={{ pt: { xs: 4 } }}>
+    <Box pt={{ xs: 4 }}>
       <Grid
         container
         spacing={{ xs: 6, md: 12 }}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
-        sx={{ py: { md: 13 } }}
+        py={{ md: 13 }}
       >
         {messageData.map((message) => (
           <Grid key={message.name} sx={{ xs: 12, md: 6 }}>
