@@ -1,16 +1,15 @@
 import Header from "./components/Header";
 import FirstView from "./components/FirstView";
-import MessageCard from "./components/MessageCard";
-import { messageData } from "./data/data";
-import Tabpanel from "./components/Tabpanel";
+import MessageTab from "./components/MessageTab";
+import TopButton from "./components/TopButton";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <FirstView />
-      <MessageCard name={messageData.name} message={messageData.message} />
-      <Tabpanel/>
+      <MessageTab />
+      <TopButton />
     </div>
   );
 }
