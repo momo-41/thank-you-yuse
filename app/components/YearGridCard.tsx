@@ -9,16 +9,20 @@ type TProps = {
   lineColor: string;
 };
 
-const YearGridCard: React.FC<TProps> = ({ yearProps, nameColor, lineColor }) => {
+const YearGridCard: React.FC<TProps> = ({
+  yearProps,
+  nameColor,
+  lineColor,
+}) => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ pt: { xs: 4 } }}>
       <Grid
         container
         spacing={{ xs: 6, md: 12 }}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
-        sx={{ py: { xs: 2, md: 13 }, px: { xs: 1, md: 10 } }}
+        sx={{ py: { md: 13 } }}
       >
         {messageData
           .filter((message) => message.year === yearProps) // 指定の学年だけを表示

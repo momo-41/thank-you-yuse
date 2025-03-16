@@ -10,18 +10,14 @@ type GridCardProps = {
 
 const GridCard: React.FC<GridCardProps> = ({ nameColor, lineColor }) => {
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-      }}
-    >
+    <Box sx={{ pt: { xs: 4 } }}>
       <Grid
         container
         spacing={{ xs: 6, md: 12 }}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
-        sx={{ py: { xs: 2, md: 13 }, px: 0 }}
+        sx={{ py: { md: 13 } }}
       >
         {messageData.map((message) => (
           <Grid key={message.name} sx={{ xs: 12, md: 6 }}>
