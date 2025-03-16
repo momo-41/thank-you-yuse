@@ -1,4 +1,5 @@
 import { Card, CardContent, Typography, Box } from "@mui/material";
+import { MessageCardProps } from "../types/types";
 
 const MessageCard: React.FC<MessageCardProps> = ({
   name,

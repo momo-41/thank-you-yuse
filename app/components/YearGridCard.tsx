@@ -2,14 +2,11 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 import { messageData } from "../data/data";
 import MessageCard from "./MessageCard";
+import { YearGridCardProps } from "../types/types";
 
-type TProps = {
-  yearProps: string;
-  nameColor: string;
-  lineColor: string;
-};
 
-const YearGridCard: React.FC<TProps> = ({
+
+const YearGridCard: React.FC<YearGridCardProps> = ({
   yearProps,
   nameColor,
   lineColor,

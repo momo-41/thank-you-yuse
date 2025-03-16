@@ -2,11 +2,9 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 import { messageData } from "../data/data";
 import MessageCard from "./MessageCard";
+import { GridCardProps } from "../types/types";
 
-type GridCardProps = {
-  nameColor: string;
-  lineColor: string;
-};
+
 
 const GridCard: React.FC<GridCardProps> = ({ nameColor, lineColor }) => {
   return (
