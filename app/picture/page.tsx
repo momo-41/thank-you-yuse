@@ -1,5 +1,7 @@
 import PicturePageText from "../components/PicturePageText";
 import Gallery from "../components/Gallery";
+import { Box } from "@mui/material";
+import TopButton from "../components/TopButton";
 
 const images = [
   [
@@ -77,17 +79,15 @@ const images = [
 
 const Page = () => {
   return (
-    <div>
+    <>
       <PicturePageText />
-
-      {/* ギャラリーを動的に表示 */}
       {images.map((group, index) => (
-        <div key={index}>
-          {/* id にユニークな値（target-gallery-${index}）を設定 */}
+        <Box key={index}>
           <Gallery images={[group]} id="target-gallery" />
-        </div>
+        </Box>
       ))}
-    </div>
+      <TopButton />
+    </>
   );
 };
 
