@@ -10,7 +10,7 @@ const Header = () => {
           fontFamily={"serif"}
           fontSize={{ xs: 25, md: 40 }}
         >
-          Yusei's Graduate web
+          {`Yusei's Graduate web`}
         </Typography>
       </Toolbar>
     </AppBar>
