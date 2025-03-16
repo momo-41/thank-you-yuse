@@ -3,9 +3,9 @@ import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import SouthIcon from "@mui/icons-material/South";
 
-const ScrollButton = ({ targetId }: { targetId: string }) => {
+const ScrollButton = ({ id }: { id: string }) => {
   const scrollToSection = () => {
-    const targetElement = document.getElementById(targetId);
+    const targetElement = document.getElementById(id);
     console.log(targetElement); // targetElementをログで確認
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" });
@@ -74,7 +74,7 @@ const PicturePageText = () => {
         </Box>
       </Box>
 
-      <ScrollButton targetId="target-gallery-0" />
+      <ScrollButton id="target-gallery" />
     </Box>
   );
 };
