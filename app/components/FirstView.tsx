@@ -6,7 +6,7 @@ import ProfileText from "./ProfileText";
 const FirstView = () => {
   return (
     <CustomBox>
-      <Box width="100%" mb={{ xs: 10, md: 0 }}>
+      <Box width="100%" mb={{ xs: 3, md: 0 }}>
         <ProfileText />
       </Box>
       <Box width="100%">
@@ -22,7 +22,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   position: "relative",
-  height: "90vh", // ヘッダーとの調整で100vhではなく90vh
+  height: "100vh", // ヘッダーとの調整で100vhではなく90vh
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
     alignItems: "",
@@ -37,7 +37,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    opacity: 0.4,
+    opacity: 0.5,
     zIndex: -1,
   },
 }));
