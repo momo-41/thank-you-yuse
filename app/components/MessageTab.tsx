@@ -10,11 +10,11 @@ const MessageTab = () => {
   const [value, setValue] = React.useState("1");
   const messageData = useMessageData();
   const tabColors: Record<string, string> = {
-    "1": "#E91E63", // ピンク
-    "2": "#10537F", // 青
+    "1": "#D16EA2", // ピンク
+    "2": "#287FB9", // 青
     "3": "#D46D05", // オレンジ
     "4": "#117642", // 緑
-    "5": "#8D00AD", // 紫
+    "5": "#9D46B0", // 紫
   };
 
   const lineColors: Record<string, string> = {
@@ -83,7 +83,11 @@ const MessageTab = () => {
       </Box>
       {/* 全員のタブパネル */}
       <TabPanel value="1">
-        <GridCard nameColor={tabColors[value]} lineColor={lineColors[value]} messageData={messageData}/>
+        <GridCard
+          nameColor={tabColors[value]}
+          lineColor={lineColors[value]}
+          messageData={messageData}
+        />
       </TabPanel>
       {/*学年ごとのタブパネル */}
       {tabs
