@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
-import { messageData } from "../data/data"; // メッセージデータをインポート
-import MessageCard from "./MessageCard"; // メッセージカードコンポーネント
+import { messageData } from "../data/data";
+import MessageCard from "./MessageCard";
 
 type GridCardProps = {
   nameColor: string;
