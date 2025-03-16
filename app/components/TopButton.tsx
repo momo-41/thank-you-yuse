@@ -15,19 +15,17 @@ const TopButton = () => {
         onClick={handleScrollToTop}
         sx={{
           bgcolor: "white",
-          color: "black",
-          minWidth: {
+          width: {
             xs: 60,
             md: 100,
           },
-          minHeight: {
+          height: {
             xs: 60,
             md: 100,
           },
           borderRadius: "50%",
           flexDirection: "column", // 縦並びに
-
-          marginBottom: {
+          mb: {
             xs: 5,
             md: 10,
           },
@@ -42,15 +40,7 @@ const TopButton = () => {
             },
           }}
         />
-        <Typography
-          sx={{
-            fontSize: {
-              xs: 14,
-              md: 20,
-              color: "#706D6D",
-            },
-          }}
-        >
+        <Typography color="#706D6D" fontSize={{ xs: 14, md: 20 }}>
           Top
         </Typography>
       </Button>
