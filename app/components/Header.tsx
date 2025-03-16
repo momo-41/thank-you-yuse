@@ -2,7 +2,14 @@ import { AppBar, Toolbar, Typography } from "@mui/material";
 
 const Header = () => {
   return (
-    <AppBar position="static" sx={{ bgcolor: "#FFFFFF" }}>
+    <AppBar
+      position="absolute"
+      sx={{
+        bgcolor: "transparent",
+        WebkitBackdropFilter: "blur(4px)",
+        backdropFilter: "blur(4px)",
+      }}
+    >
       <Toolbar sx={{ color: "#E45C92" }}>
         <Typography
           align={"center"}

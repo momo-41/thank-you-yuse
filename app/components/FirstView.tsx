@@ -22,7 +22,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   position: "relative",
-  height: "90vh", // ヘッダーとの調整で100vhではなく90vh
+  height: "100vh", // ヘッダーとの調整で100vhではなく90vh
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
     alignItems: "",
