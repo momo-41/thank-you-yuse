@@ -3,13 +3,13 @@ import Gallery from "../components/Gallery";
 
 const images = [
   [
-    "/large-picture/lyusei17.png",
+    "/normal-picture/yusei3.jpg",
     "/normal-picture/yusei1.jpg",
     "/normal-picture/yusei4.jpg",
     "/normal-picture/yusei5.jpg",
     "/normal-picture/yusei6.jpg",
     "/large-picture/lyusei1.jpg",
-    "/normal-picture/yusei3.jpg",
+    "/large-picture/lyusei6.jpg",
     "/normal-picture/yusei7.png",
     "/normal-picture/yusei9.jpg",
     "/large-picture/lyusei7.jpg",
@@ -26,7 +26,8 @@ const images = [
     "/large-picture/lyusei15.jpg",
     "/normal-picture/yusei17.jpg",
     "/normal-picture/yusei18.jpg",
-    "/large-picture/lyusei6.jpg",
+    "/large-picture/lyusei17.png",
+
     "/normal-picture/yusei19.jpg",
     "/normal-picture/yusei20.jpg",
   ],
@@ -83,7 +84,7 @@ const Page = () => {
       {images.map((group, index) => (
         <div key={index}>
           {/* id にユニークな値（target-gallery-${index}）を設定 */}
-          <Gallery images={[group]} id={`target-gallery-${index}`} />
+          <Gallery images={[group]} id="target-gallery" />
         </div>
       ))}
     </div>
