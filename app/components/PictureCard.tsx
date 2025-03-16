@@ -1,14 +1,12 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import Image from "next/image";
-
-import Link from "next/link"; // Linkをインポート
+import Link from "next/link";
 
 const PictureCard = () => {
   return (
     <Box display={"flex"} justifyContent={{ xs: "center", md: "flex-start" }}>
-      <Link href="/picture" passHref>
-        {/* Linkコンポーネントを使用 */}
+      <Link href="/picture" passHref style={{ textDecoration: "none" }}>
         <Card
           sx={{
             width: { xs: 300, md: 550 },
@@ -16,7 +14,6 @@ const PictureCard = () => {
             pt: 1.5,
             px: 1.5,
             bgcolor: "#f8f8f8",
-            textDecoration: "none", // Linkのデフォルトの装飾を取り除く
           }}
         >
           <CardMedia
@@ -27,14 +24,14 @@ const PictureCard = () => {
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              p: 0, // MEMO: デフォルトでpaddingがあたっているので0に設定
+              p: 0, // デフォルトでpaddingがあたっているので0に設定
               py: 1.5,
             }}
           >
             <Box display={"flex"} alignItems={"center"}>
               <Box display={"flex"} alignItems={"center"} mb={0.3}>
                 <Image
-                  src={"/chat-bubble-icon.svg"} // 修正: パスの` `を削除
+                  src={"/chat-bubble-icon.svg"}
                   alt={"吹き出しのアイコン"}
                   width={14}
                   height={14}
