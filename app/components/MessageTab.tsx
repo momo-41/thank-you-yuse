@@ -5,6 +5,7 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import GridCard from "./GridCard";
 import YearGridCard from "./YearGridCard";
 import { useMessageData } from "../data/fetchData";
+import CherryBlossom from "./CherryBlossom";
 
 const MessageTab = () => {
   const [value, setValue] = React.useState("1");
@@ -79,27 +80,34 @@ const MessageTab = () => {
             ))}
         </TabList>
       </Box>
-      {/* 全員のタブパネル */}
-      <TabPanel value="1">
-        <GridCard
-          nameColor={tabColors[value]}
-          lineColor={lineColors[value]}
-          messageData={messageData}
-        />
-      </TabPanel>
-      {/*学年ごとのタブパネル */}
-      {tabs
-        .filter((tab) => tab.value !== "1")
-        .map((tab) => (
-          <TabPanel key={tab.value} value={tab.value}>
-            <YearGridCard
-              yearProps={tab.label}
-              nameColor={tabColors[value]}
-              lineColor={lineColors[value]}
-              messageData={messageData}
-            />
-          </TabPanel>
-        ))}
+      <Box sx={{ position: "relative", minHeight: "500px" }}>
+        <CherryBlossom />
+        {/* 全員のタブパネル */}
+        <TabPanel value="1" sx={{ position: "relative", zIndex: 1 }}>
+          <GridCard
+            nameColor={tabColors[value]}
+            lineColor={lineColors[value]}
+            messageData={messageData}
+          />
+        </TabPanel>
+        {/*学年ごとのタブパネル */}
+        {tabs
+          .filter((tab) => tab.value !== "1")
+          .map((tab) => (
+            <TabPanel
+              key={tab.value}
+              value={tab.value}
+              sx={{ position: "relative", zIndex: 1 }}
+            >
+              <YearGridCard
+                yearProps={tab.label}
+                nameColor={tabColors[value]}
+                lineColor={lineColors[value]}
+                messageData={messageData}
+              />
+            </TabPanel>
+          ))}
+      </Box>
     </TabContext>
   );
 };
