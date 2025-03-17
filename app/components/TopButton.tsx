@@ -1,13 +1,11 @@
 "use client";
-
-import * as React from "react";
 import { Button, Box, Typography } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+
 const TopButton = () => {
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
   return (
     <Box
       display={"flex"}
