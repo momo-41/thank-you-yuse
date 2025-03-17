@@ -2,21 +2,21 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 import MessageCard from "./MessageCard";
 import { YearGridCardProps } from "../types/types";
+
 const YearGridCard: React.FC<YearGridCardProps> = ({
   yearProps,
   nameColor,
   lineColor,
-  messageData
+  messageData,
 }) => {
   return (
-    <Box pt={{ xs: 4 }}>
+    <Box pt={{ xs: 4, md: 8 }}>
       <Grid
         container
-        spacing={{ xs: 6, md: 12 }}
+        spacing={{ xs: 6, md: 7, xl: 10 }}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
-        py={{ md: 13 }}
       >
         {messageData
           .filter((message) => message.year === yearProps) // 指定の学年だけを表示
