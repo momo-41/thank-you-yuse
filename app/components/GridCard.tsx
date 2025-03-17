@@ -9,14 +9,13 @@ const GridCard: React.FC<GridCardProps> = ({
   messageData,
 }) => {
   return (
-    <Box pt={{ xs: 4 }}>
+    <Box pt={{ xs: 4, md: 8 }}>
       <Grid
         container
-        spacing={{ xs: 6, md: 12 }}
+        spacing={{ xs: 6, md: 7, xl: 10 }}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
-        py={{ md: 13 }}
       >
         {messageData.map((message) => (
           <Grid key={message.name} sx={{ xs: 12, md: 6 }}>

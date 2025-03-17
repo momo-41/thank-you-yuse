@@ -51,7 +51,6 @@ const MessageTab = () => {
         >
           {/* 全員タブ */}
           <Tab
-            // component="button"
             label="全員"
             value="1"
             sx={{
@@ -67,7 +66,6 @@ const MessageTab = () => {
             .filter((tab) => tab.value !== "1")
             .map((tab) => (
               <Tab
-                // component="button"
                 key={tab.value}
                 label={tab.label}
                 value={tab.value}

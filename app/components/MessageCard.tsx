@@ -10,13 +10,13 @@ const MessageCard: React.FC<MessageCardProps> = ({
   return (
     <Card
       sx={{
-        width: { xs: 300, md: 500, xl: 700 },
+        width: { xs: 300, md: 500, xl: 620 },
         borderRadius: 4,
         boxShadow: 3,
         px: 3,
         position: "relative",
         m: { md: 2 },
-        pt: { xs: 0.5, md: 1, xl: 2 },
+        pt: { xs: 0.5, md: 1 },
       }}
     >
       <Box

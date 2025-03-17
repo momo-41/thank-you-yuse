@@ -6,7 +6,6 @@ import SouthIcon from "@mui/icons-material/South";
 const ScrollButton = ({ id }: { id: string }) => {
   const scrollToSection = () => {
     const targetElement = document.getElementById(id);
-    console.log(targetElement); // targetElementをログで確認
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
