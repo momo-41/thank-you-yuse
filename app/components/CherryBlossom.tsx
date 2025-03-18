@@ -38,6 +38,7 @@ const CherryBlossom = () => {
   }, []);
 
   return (
+    // 桜が降る
     <div className={styles.cherryBlossomContainer}>
       {petals.map((petal) => (
         <div
