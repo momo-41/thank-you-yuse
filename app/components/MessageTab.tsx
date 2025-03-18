@@ -80,7 +80,7 @@ const MessageTab = () => {
             ))}
         </TabList>
       </Box>
-      <Box sx={{ position: "relative", minHeight: "500px" }}>
+      <Box position="relative">
         <CherryBlossom />
         {/* 全員のタブパネル */}
         <TabPanel value="1" sx={{ position: "relative", zIndex: 1 }}>
