@@ -1,19 +1,19 @@
 .cherryBlossomContainer {
   position: absolute;
-  top: -50px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% + 50px);
+  height: 100%;
   overflow: hidden;
   pointer-events: none;
-  z-index: 1000;
+  z-index: 0;
 }
 
 .petal {
   position: absolute;
   background-color: #ffc0cb;
   border-radius: 150% 0 150% 0;
-  animation: animatePetal 10s linear;
+  animation: animatePetal linear forwards;
   opacity: 0;
 }
 
@@ -32,19 +32,19 @@
 
 @keyframes animatePetal {
   0% {
-    top: -10%;
+    top: 0;
     opacity: 0;
     transform: rotate(0deg);
   }
-  10% {
-    opacity: 0.7;
+  5% {
+    opacity: 0.8;
   }
-  90% {
-    opacity: 0.7;
+  95% {
+    opacity: 0.8;
   }
   100% {
     opacity: 0;
-    top: 100vh;
+    top: 100%;
     transform: rotate(3000deg);
   }
 }

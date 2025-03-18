@@ -18,19 +18,21 @@ const CherryBlossom = () => {
     const createPetal = (): Petal => ({
       id: Math.random(),
       left: Math.random() * 100,
-      animationDuration: 3 + Math.random() * 4,
+      animationDuration: 10 + Math.random() * 5, // 10〜15秒に延長
       delay: Math.random() * 2,
       size: 10 + Math.random() * 10,
       rotation: Math.random() * 360,
     });
 
-    const initialPetals = Array.from({ length: 15 }, createPetal);
+    // 初期花びらの数を増やす
+    const initialPetals = Array.from({ length: 20 }, createPetal);
     setPetals(initialPetals);
 
     const interval = setInterval(() => {
       setPetals((prevPetals) => {
         const newPetal = createPetal();
-        return [...prevPetals.slice(-14), newPetal];
+        // 花びらの最大数を増やし、画面下端まで降るのに十分な数を保持
+        return [...prevPetals.slice(-40), newPetal];
       });
     }, 300);
 
