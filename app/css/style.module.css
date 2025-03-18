@@ -33,7 +33,7 @@
 @keyframes animatePetal {
   0% {
     top: 0;
-    opacity: 0;
+    opacity: 0.1;
     transform: rotate(0deg);
   }
   5% {
@@ -43,8 +43,8 @@
     opacity: 0.8;
   }
   100% {
-    opacity: 0;
     top: 100%;
-    transform: rotate(3000deg);
+    opacity: 0;
+    transform: rotate(7000deg);
   }
 }
