@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "ゆせさん今までありがとうございました！！",
-  description:
-    "ゆせさんご卒業おめでとうございます！寂しくなったらこれ見て元気出してください！私たちはいつでも応援しています！",
+  description: `ゆせさんご卒業おめでとうございます！
+    寂しくなったらこれ見て元気出してください！私たちはいつでも応援しています！`,
   icons: {
     icon: "/favicon-yuse.png",
   },
