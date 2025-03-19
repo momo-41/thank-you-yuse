@@ -46,7 +46,7 @@ const ProfileText = () => {
         pt={{ xs: 2, md: 5 }}
         pl={{ md: 4 }}
       >
-        2022.12.15 ~ 2025.3.19
+        2022.12.25 ~ 2025.3.19
       </Typography>
     </Box>
   );
