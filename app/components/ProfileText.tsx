@@ -7,7 +7,7 @@ const ProfileText = () => {
         fontFamily={"serif"}
         color="#848484"
         fontSize={{ xs: 30, md: 40 }}
-        pl={{ md: 7 }}
+        pl={{ md: 13, xl: 20 }}
       >
         2nd President
       </Typography>
@@ -24,7 +24,7 @@ const ProfileText = () => {
           fontFamily={"serif"}
           color="#0C6DAE"
           fontSize={{ xs: 60, md: 70 }}
-          pl={{ md: 18 }}
+          pl={{ md: 22, xl: 30 }}
           mb={-3}
         >
           Yusei
@@ -33,7 +33,7 @@ const ProfileText = () => {
           fontFamily={"serif"}
           color="#0C6DAE"
           fontSize={{ xs: 60, md: 70 }}
-          pl={{ md: 30 }}
+          pl={{ md: 34, xl: 44 }}
         >
           Imamura
         </Typography>
@@ -44,6 +44,7 @@ const ProfileText = () => {
         color="#10537F"
         textAlign={"center"}
         pt={{ xs: 2, md: 5 }}
+        pl={{ md: 4 }}
       >
         2022.12.15 ~ 2025.3.19
       </Typography>

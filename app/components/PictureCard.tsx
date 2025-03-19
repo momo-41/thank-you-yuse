@@ -9,23 +9,26 @@ const PictureCard = () => {
       <Link href="/picture" passHref style={{ textDecoration: "none" }}>
         <Card
           sx={{
-            width: { xs: 300, md: 550 },
-            height: { xs: 250, md: 450 },
+            width: { xs: 300, md: 550, xl: 660 },
+            height: { xs: 250, md: 450, xl: 480 },
             pt: 1.5,
             px: 1.5,
             bgcolor: "#f8f8f8",
           }}
         >
           <CardMedia
-            sx={{ height: { xs: 200, md: 400 }, width: "100%" }}
+            sx={{
+              height: { xs: 200, md: 400 },
+              width: "100%",
+            }}
             image="/yuse.jpg"
           />
           <CardContent
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              p: 0, // デフォルトでpaddingがあたっているので0に設定
-              py: 1.5,
+              p: 0,
+              mt: { md: 2, xl: 6 },
             }}
           >
             <Box display={"flex"} alignItems={"center"}>
